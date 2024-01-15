@@ -5,14 +5,16 @@ import { AuthGuard } from './auth.guard';
 
 @Controller('auth')
 export class AuthController {
+
     constructor(private readonly authService: AuthService) {}
+
     @HttpCode(HttpStatus.OK)
     @Post('/login')
     login(@Body() body: AuthDto) {
         return this.authService.login(body.username, body.password);
     }
 
-    @HttpCode(HttpStatus.OK)
+    @HttpCode(HttpStatus.CREATED)
     @Post('/register')
     register(@Body() body: AuthDto) {
         return this.authService.register(body.username, body.password);
