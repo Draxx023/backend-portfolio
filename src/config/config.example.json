@@ -1,0 +1,16 @@
+{
+    "database": {
+      "type": "mariadb",
+      "host": "",
+      "port": 3306,
+      "username": "",
+      "password": "",
+      "database": "",
+      "synchronize": true,
+      "logging": true
+    },
+    "jwt": {
+      "secret": "secret"
+    }
+  }
+  
